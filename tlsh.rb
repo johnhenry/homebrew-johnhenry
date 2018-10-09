@@ -9,7 +9,8 @@ class Tlsh < Formula
   depends_on "cmake" => :build
   def install
     system "sh ./make.sh"
-    bin.install "bin/tlsh"
+    prefix.install Dir["./*"]
+    bin.install Dir["bin/*"]
   end
   # test do
   #   # `test do` will create, run in and delete a temporary directory.
