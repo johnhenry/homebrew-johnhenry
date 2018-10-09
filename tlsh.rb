@@ -2,22 +2,13 @@
 #                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Tlsh < Formula
-  desc ""
-  homepage ""
+  desc "Trend Micro Locality Sensitive Hash"
+  homepage "https://github.com/trendmicro/tlsh"
   url "https://github.com/trendmicro/tlsh/archive/v3.4.5.tar.gz"
   sha256 "0383c1f6e888af651ba78c112f7311171802b71b1a2698b2bfb3bc4f1a543bf4"
-  # depends_on "cmake" => :build
-
+  depends_on "cmake" => :build
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # system "./configure", "--disable-debug",
-    #                       "--disable-dependency-tracking",
-    #                       "--disable-silent-rules",
-    #                       "--prefix=#{prefix}"
-    # # system "cmake", ".", *std_cmake_args
-    # system "make", "install" # if this fails, try separate make/make install steps
-    system "./make.sh"
+    system "sh ./make.sh"
     bin.install "bin/tlsh"
   end
   # test do
