@@ -1,5 +1,10 @@
-Tap this repo
+# johnhenry/homebrew-johnhenry (retired)
 
-# brew tap johnhenry/johnhenry
+**This tap has been retired.** Its one formula (`tlsh`) has moved to the
+new consolidated tap at [johnhenry/homebrew-tap](https://github.com/johnhenry/homebrew-tap).
 
-# brew install tlsh
+```bash
+brew untap johnhenry/johnhenry   # if previously tapped
+brew tap johnhenry/tap
+brew install tlsh
+```
